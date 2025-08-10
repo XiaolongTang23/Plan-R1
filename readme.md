@@ -10,19 +10,19 @@
 
 ---
 
-## 📑 Table of Contents
-- [Results](#-results)
-- [Setup](#-setup)
-- [Datasets](#-datasets)
-- [Training](#-training)
-- [Validation](#-validation)
-- [Simulation](#-simulation)
-- [Acknowledgements](#-acknowledgements)
-- [Citation](#-citation)
+## Table of Contents
+- [Results](#results)
+- [Setup](#setup)
+- [Datasets](#datasets)
+- [Training](#training)
+- [Validation](#validation)
+- [Simulation](#simulation)
+- [Acknowledgements](#acknowledgements)
+- [Citation](#citation)
 
 ---
 
-## 📊 Results
+## Results
 **Comparison with SOTAs on nuPlan benchmark.**   
 NR/R: non-reactive/reactive mode. *: with rule-based post-processing.
 
@@ -47,7 +47,7 @@ NR/R: non-reactive/reactive mode. *: with rule-based post-processing.
 
 ---
 
-## 🛠️ Setup
+## Setup
 
 ### 1. Create Environment
 ```
@@ -67,7 +67,9 @@ Plan-R1
 ├── ...
 ```
 
-## 📦 Datasets
+---
+
+## Datasets
 
 ### 1. Download [nuPlan Dataset](https://nuplan-devkit.readthedocs.io/en/latest/dataset_setup.html) and organize the directory as:
 ```
@@ -101,7 +103,9 @@ pip install tensorboard
 pip install numpy==1.24.4
 ```
 
-## 🚀 Training
+---
+
+## Training
 
 ### 1. Preprocess Dataset
 🕒: Preprocessing may take a long time (~30 hours).
@@ -118,18 +122,20 @@ python train.py --config config/train/pred.yaml
 python train.py --config config/train/plan.yaml
 ```
 
-## ✅ Validation
+---
+
+## Validation
 💡: to visualize results during validation, set `val_visualization = True` in `config/val/pred.yaml` or `config/val/plan.yaml`.
-### 1. Pre-training
 ```
+# For Pre-training
 python val.py --config config/val/pred.yaml
-```
-### 2. Fine-tuning
-```
+# For Fine-tuning
 python val.py --config config/val/plan.yaml
 ```
 
-## 📈 Simulation
+---
+
+## Simulation
 ```
 bash simulation/run_simulation.sh <sim_type> <planner> <split> <ckpt_path>
 ```
@@ -151,7 +157,9 @@ bash simulation/run_simulation.sh closed_loop_nonreactive_agents planr1_planner 
 python run_nuboard.py
 ```
 
-## 🙏 Acknowledgements
+---
+
+## Acknowledgements
 We thank the following works for their contributions and inspiration to this project:  
 - [nuPlan](https://github.com/motional/nuplan-devkit)
 - [PDM](https://github.com/autonomousvision/tuplan_garage)
@@ -160,7 +168,9 @@ We thank the following works for their contributions and inspiration to this pro
 - [STR](https://github.com/Tsinghua-MARS-Lab/StateTransformer)
 - [HPNet](https://github.com/XiaolongTang23/HPNet)
 
-## 📚 Citation
+---
+
+## Citation
 
 If Plan-R1 has been helpful in your research, please consider citing our work:
 
