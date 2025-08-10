@@ -1,6 +1,11 @@
 # Plan-R1: Safe and Feasible Trajectory Planning as Language Modeling
-[arXiv](https://arxiv.org/abs/2505.17659) 
-This repository contains the official implementation of **PlanR1**.  
+
+<p align="left">
+<a href='[https://arxiv.org/abs/2404.14327](https://arxiv.org/abs/2505.17659)' style='padding-left: 0.5rem;'>
+    <img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=wihte' alt='arXiv PDF'>
+</a>
+</p>
+
 ![Overview](assets/network.png)
 
 ---
@@ -42,7 +47,6 @@ NR/R: non-reactive/reactive mode. *: with rule-based post-processing.
 |  | Plan-R1 (Ours) | 87.99 | **84.97** | <u>75.31</u> | **73.18** | <u>89.46</u> | **88.89** |
 
 ---
-
 
 ## 🛠️ Setup
 
@@ -116,7 +120,7 @@ python train.py --config config/train/plan.yaml
 ```
 
 ## ✅ Validation
-💡 Tip: to visualize results during validation, set `val_visualization = True` in `config/val/pred.yaml` or `config/val/plan.yaml`.
+💡: to visualize results during validation, set `val_visualization = True` in `config/val/pred.yaml` or `config/val/plan.yaml`.
 ### 1. Pre-training
 ```
 python val.py --config config/val/pred.yaml
@@ -130,7 +134,7 @@ python val.py --config config/val/plan.yaml
 ```
 bash simulation/run_simulation.sh <sim_type> <planner> <split> <ckpt_path>
 ```
-### Parameters
+### Config
 
 | Argument     | Description / Options                                                               |
 |--------------|-------------------------------------------------------------------------------------|
