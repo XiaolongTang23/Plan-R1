@@ -1,0 +1,62 @@
+univeral_config: &univeral_config
+  mode: "plan"
+  token_dict_path: tokens/tokens_1024.pt
+  num_tokens: 1024
+  interval: 5
+  num_historical_steps: 20
+  num_future_steps: 80
+
+datamodule:
+  <<: *univeral_config
+  root: ../nuplan/dataset
+  dir: train
+  train_batch_size: 4
+  val_batch_size: 4
+  shuffle: True
+  num_workers: 8
+  pin_memory: True
+  persistent_workers: True
+  num_samples_per_second: 10
+  num_total_scenarios: 100000
+  ratio: 0.1
+  parallel: True
+
+trainer:
+  ckpt_path: ckpts/pre-training.ckpt
+  strategy: ddp_find_unused_parameters_true
+  accelerator: "gpu"
+  devices: 8
+  max_epochs: 5
+  ckpt:
+    monitor: val_reward
+    save_top_k: 5
+    mode: max
+  lr_monitor:
+    logging_interval: epoch
+  csv_logger:
+    save_dir: lightning_logs
+    name: plan
+
+model:
+  <<: *univeral_config
+  hidden_dim: 128
+  num_heads: 8
+  num_attn_layers: 6
+  num_hops: 4
+  agent_radius: 60
+  polygon_radius: 30
+  pred_top_k: 1
+  plan_top_k: 1
+  rollout_top_k: 50
+  num_samples: 4
+  beta: 0.1
+  dropout: 0.1
+  lr: 0.000004
+  weight_decay: 0.0001
+  warmup_epochs: 0
+  T_max: 32
+  val_visualization: False
+  comfort_reward_weight: 2
+  ttc_reward_weight: 5
+  speed_limit_reward_weight: 4
+  progress_reward_weight: 2
