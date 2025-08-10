@@ -58,7 +58,7 @@ conda install pytorch-lightning==2.0.3
 pip install torch-scatter==2.1.2 -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
 pip install torch_geometric==2.3.1
 ```
-### 2. Download the pre-trained model weights and organize the directory as:
+### 2. Download the pre-trained [model weights](https://drive.google.com/drive/folders/1E_A3NVgC3IZqCbs7G75A9oZcQHGL3I4j?usp=sharing) and organize the directory as:
 ```
 Plan-R1
 ├── ckpts
