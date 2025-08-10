@@ -76,6 +76,3 @@ bash simulation/run_simulation.sh <sim_type> <planner> <split> <ckpt_path>
 ```
 bash simulation/run_simulation.sh closed_loop_nonreactive_agents planr1_planner test14-random ckpts/fine-tuning.ckpt
 ```
-
-## Tips
-During pre-training, the final architecture for fine-tuning had not yet been finalized. As a result, the model structure saved in pre-training.ckpt differs slightly from the current architecture. Therefore, when fine-tuning from this checkpoint, the model must be loaded using the logic in lines 23–34 of train.py, rather than directly using torch.load.
