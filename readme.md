@@ -108,7 +108,7 @@ pip install numpy==1.24.4
 ## Training
 
 ### 1. Preprocess Dataset
-🕒: Preprocessing may take a long time (~30 hours).
+Preprocessing may take a long time (~30 hours).
 ```
 python preprocess_dataset.py
 ```
@@ -125,7 +125,7 @@ python train.py --config config/train/plan.yaml
 ---
 
 ## Validation
-💡: to visualize results during validation, set `val_visualization = True` in `config/val/pred.yaml` or `config/val/plan.yaml`.
+To visualize results during validation, set `val_visualization = True` in `config/val/pred.yaml` or `config/val/plan.yaml`.
 ```
 # For Pre-training
 python val.py --config config/val/pred.yaml
