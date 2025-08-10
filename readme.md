@@ -23,8 +23,7 @@
 ---
 
 ## 📊 Results
-**Comparison with SOTAs on nuPlan benchmark.**  
-The best result is in **bold** and the second best is <u>underlined</u>.  
+**Comparison with SOTAs on nuPlan benchmark.**   
 NR/R: non-reactive/reactive mode. *: with rule-based post-processing.
 
 | Type | Planner | Val14 NR | Val14 R | Test14-hard NR | Test14-hard R | Test14-random NR | Test14-random R |
@@ -34,17 +33,17 @@ NR/R: non-reactive/reactive mode. *: with rule-based post-processing.
 |  | PDM-Closed* | 92.84 | 92.12 | 65.08 | 75.19 | 90.05 | 91.64 |
 |  | PDM-Hybrid* | 92.77 | 92.11 | 65.99 | 76.07 | 90.10 | 91.28 |
 |  | Gameformer* | 79.94 | 79.78 | 68.70 | 67.05 | 83.88 | 82.05 |
-|  | PLUTO* | 92.88 | 89.84 | **80.08** | 76.88 | 92.23 | 90.29 |
+|  | PLUTO* | 92.88 | 89.84 | 80.08 | 76.88 | 92.23 | 90.29 |
 |  | PlanAgent* | 93.26 | 92.75 | 72.51 | 76.82 | - | - |
-|  | Diffusion Planner* | <u>94.26</u> | <u>92.90</u> | <u>78.87</u> | **82.00** | **94.80** | <u>91.75</u> |
+|  | Diffusion Planner* | 94.26 | 92.90 | 78.87 | 82.00 | 94.80 | 91.75 |
 |  | Carplanner* | - | - | - | - | 94.07 | 91.10 |
-|  | **Plan-R1*** (Ours) | **94.77** | **93.25** | 77.79 | <u>80.97</u> | <u>94.11</u> | **94.51** |
+|  | Plan-R1* (Ours) | 94.77 | 93.25 | 77.79 | 80.97 | 94.11 | 94.51 |
 | **Learning-based** | UrbanDriver | 68.57 | 64.11 | 50.40 | 49.95 | 51.83 | 67.15 |
 |  | PDM-Open | 53.53 | 54.24 | 33.51 | 35.83 | 52.81 | 57.23 |
 |  | PlanTF | 84.27 | 76.95 | 69.70 | 61.61 | 85.62 | 79.58 |
-|  | PLUTO | <u>88.89</u> | 78.11 | 70.03 | 59.74 | **89.90** | 78.62 |
-|  | Diffusion Planner | **89.87** | <u>82.80</u> | **75.99** | <u>69.22</u> | 89.19 | <u>82.93</u> |
-|  | Plan-R1 (Ours) | 87.99 | **84.97** | <u>75.31</u> | **73.18** | <u>89.46</u> | **88.89** |
+|  | PLUTO | <u>88.89</u> | 78.11 | 70.03 | 59.74 | 89.90 | 78.62 |
+|  | Diffusion Planner | 89.87 | 82.80 | 75.99 | 69.22 | 89.19 | 82.93 |
+|  | Plan-R1 (Ours) | 87.99 | 84.97 | 75.31 | 73.18 | 89.46 | 88.89 |
 
 ---
 
