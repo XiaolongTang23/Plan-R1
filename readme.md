@@ -162,6 +162,7 @@ python run_nuboard.py
 ## Acknowledgements
 We thank the following works for their contributions and inspiration to this project:  
 - [nuPlan](https://github.com/motional/nuplan-devkit)
+- [SMART](https://github.com/rainmaker22/SMART)
 - [PDM](https://github.com/autonomousvision/tuplan_garage)
 - [PLUTO](https://github.com/jchengai/pluto)  
 - [Diffusion Planner](https://github.com/ZhengYinan-AIR/Diffusion-Planner)
