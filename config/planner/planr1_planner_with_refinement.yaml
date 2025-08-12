@@ -8,6 +8,13 @@ planr1_planner_with_refinement:
     model_path: 
     model_mode: "plan"
     visualization: False
+    
+    token_builder:
+      _target_: transforms.token_builder.TokenBuilder
+      _convert_: "all"
+      token_dict_path: ${oc.env:PROJECT_ROOT}/tokens/tokens_1024.pt
+      interval: 5
+      num_historical_steps: 20
 
   # parameters for output trajectory
   trajectory_sampling:
