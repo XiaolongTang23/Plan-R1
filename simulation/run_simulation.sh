@@ -13,9 +13,9 @@ if [ $# -lt 4 ]; then
 fi
 
 # model_path_param
-if [[ "$PLANNER" == *"planr1_planner"* ]]; then
+if [[ "$PLANNER" == "planr1_planner" ]]; then
     model_path_param="planner.${PLANNER}.model_path"
-elif [[ "$PLANNER" == *"planr1_planner_with_refinement"* ]]; then
+elif [[ "$PLANNER" == "planr1_planner_with_refinement" ]]; then
     model_path_param="planner.${PLANNER}.planr1_planner.model_path"
 else
     echo "Unsupported planner type: $PLANNER"
