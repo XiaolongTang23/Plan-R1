@@ -6,7 +6,7 @@
 </a>
 </p>
 
-![Overview](assets/planr1.pdf)
+![Overview](assets/planr1.png)
 
 ---
 
