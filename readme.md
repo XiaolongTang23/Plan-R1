@@ -1,5 +1,7 @@
 # Plan-R1: Safe and Feasible Trajectory Planning as Language Modeling
 
+⚠️ **Important Note**: This is a legacy branch. The latest code, improved results, and updated documentation have been migrated to the **[main]** branch.
+
 <p align="left">
 <a href='[https://arxiv.org/abs/2404.14327](https://arxiv.org/abs/2505.17659)' style='padding-left: 0.5rem;'>
     <img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=wihte' alt='arXiv PDF'>
