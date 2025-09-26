@@ -1,0 +1,54 @@
+univeral_config: &univeral_config
+  mode: "pred"
+  token_dict_path: tokens/tokens_1024.pt
+  num_tokens: 1024
+  interval: 5
+  num_historical_steps: 20
+  num_future_steps: 80
+
+datamodule:
+  <<: *univeral_config
+  root: ../nuplan/dataset
+  dir: train
+  train_batch_size: 8
+  val_batch_size: 16
+  shuffle: True
+  num_workers: 8
+  pin_memory: True
+  persistent_workers: True
+  num_samples_per_second: 10
+  num_total_scenarios: 1000000
+  ratio: 0.1
+  parallel: True
+
+trainer:
+  ckpt_path: 
+  strategy: ddp_find_unused_parameters_true
+  accelerator: "gpu"
+  devices: 8
+  max_epochs: 32 
+  ckpt:
+    monitor: val_token_cls_acc
+    save_top_k: 3
+    mode: max
+  lr_monitor:
+    logging_interval: epoch
+  csv_logger:
+    save_dir: lightning_logs
+    name: pred
+
+model:
+  <<: *univeral_config
+  hidden_dim: 128
+  num_heads: 8
+  num_attn_layers: 6
+  num_hops: 4
+  agent_radius: 60
+  polygon_radius: 30
+  pred_top_k: 1
+  dropout: 0.1
+  lr: 0.0003
+  weight_decay: 0.0001
+  warmup_epochs: 4
+  T_max: 32
+  val_visualization: False
