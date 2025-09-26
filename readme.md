@@ -6,7 +6,7 @@
 </a>
 </p>
 
-![Overview](assets/network.png)
+![Overview](assets/planr1.pdf)
 
 ---
 
@@ -37,13 +37,13 @@ NR/R: non-reactive/reactive mode. *: with rule-based post-processing.
 |  | PlanAgent* | 93.26 | 92.75 | 72.51 | 76.82 | - | - |
 |  | Diffusion Planner* | 94.26 | 92.90 | 78.87 | 82.00 | 94.80 | 91.75 |
 |  | Carplanner* | - | - | - | - | 94.07 | 91.10 |
-|  | Plan-R1* (Ours) | 94.77 | 93.25 | 77.79 | 80.97 | 94.11 | 94.51 |
+|  | Plan-R1* (Ours) | 94.72 | 93.54 | 78.46 | 81.70 | 94.64 | 93.71 |
 | **Learning-based** | UrbanDriver | 68.57 | 64.11 | 50.40 | 49.95 | 51.83 | 67.15 |
 |  | PDM-Open | 53.53 | 54.24 | 33.51 | 35.83 | 52.81 | 57.23 |
 |  | PlanTF | 84.27 | 76.95 | 69.70 | 61.61 | 85.62 | 79.58 |
-|  | PLUTO | <u>88.89</u> | 78.11 | 70.03 | 59.74 | 89.90 | 78.62 |
+|  | PLUTO | 88.89 | 78.11 | 70.03 | 59.74 | 89.90 | 78.62 |
 |  | Diffusion Planner | 89.87 | 82.80 | 75.99 | 69.22 | 89.19 | 82.93 |
-|  | Plan-R1 (Ours) | 87.99 | 84.97 | 75.31 | 73.18 | 89.46 | 88.89 |
+|  | Plan-R1 (Ours) | 88.98 | 87.69 | 77.45 | 77.20 | 91.23 | 90.04 |
 
 ---
 
@@ -58,7 +58,7 @@ conda install pytorch-lightning==2.0.3
 pip install torch-scatter==2.1.2 -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
 pip install torch_geometric==2.3.1
 ```
-### 2. Download the pre-trained [model weights](https://drive.google.com/drive/folders/1E_A3NVgC3IZqCbs7G75A9oZcQHGL3I4j?usp=sharing) and organize the directory as:
+### 2. Download the pre-trained [model weights](https://drive.google.com/drive/folders/1I8wPrpLAeKFS7x7fpQOwunE7qtDJN9hm?usp=sharing) and organize the directory as:
 ```
 Plan-R1
 ├── ckpts
