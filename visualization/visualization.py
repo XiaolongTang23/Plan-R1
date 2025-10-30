@@ -16,6 +16,7 @@ def visualization(data:Batch, pred_position:torch.tensor=None, pred_heading=None
     agent_type = data['agent']['type']
     agent_identity = data['agent']['identity']
     agent_corner_position = compute_corner_positions(agent_position, agent_heading, agent_box)
+    agent_corner_position = torch.roll(agent_corner_position, 1, 1)
     if pred_position is not None and pred_heading is not None:
         pred_corner_position = compute_corner_positions(pred_position, pred_heading, agent_box.unsqueeze(-1))
 
@@ -99,7 +100,6 @@ def visualization(data:Batch, pred_position:torch.tensor=None, pred_heading=None
         agent_position_i = agent_position[agent_mask].cpu().numpy()
         agent_type_i = agent_type[agent_mask].cpu().numpy()
         agent_identity_i = agent_identity[agent_mask].cpu().numpy()
-        agent_corner_position = torch.roll(agent_corner_position, 1, 1)
         agent_corner_position_i = agent_corner_position[agent_mask].cpu().numpy()
         pred_corner_position_i = pred_corner_position[agent_mask].cpu().numpy() if pred_position is not None and pred_heading is not None else None
         for j in range(len(agent_position_i)-1, -1, -1):
