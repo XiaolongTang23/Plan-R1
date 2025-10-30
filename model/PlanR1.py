@@ -257,7 +257,7 @@ class PlanR1(pl.LightningModule):
         self.log('val_min_joint_fde', self.min_joint_fde, prog_bar=True, on_step=False, on_epoch=True)
 
         if self.val_visualization:
-            visualization(data, position)
+            visualization(data, position, heading)
 
     def freeze_pred_model(self):
         # eval mode
@@ -460,4 +460,5 @@ class PlanR1(pl.LightningModule):
             'interval': 'epoch',
             'frequency': 1
         }
+
         return [optimizer], [scheduler]
