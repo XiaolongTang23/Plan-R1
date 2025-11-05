@@ -81,11 +81,11 @@ Plan-R1
         │   ├── ...
         └── nuplan-v1.1
             └── splits
-            ├── train
-            ├── val
-            └── test
-                ├── 2021.05.25.12.30.39_veh-25_00005_00215.db
-                ├── ...
+                ├── train
+                ├── val
+                └── test
+                    ├── 2021.05.25.12.30.39_veh-25_00005_00215.db
+                    ├── ...
 ```
 
 ### 2. Install nuplan-devkit
