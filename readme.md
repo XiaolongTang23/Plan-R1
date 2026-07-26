@@ -172,10 +172,11 @@ We thank the following works for their contributions and inspiration to this pro
 If Plan-R1 has been helpful in your research, please consider citing our work:
 
 ```
-@article{tang2025plan,
-  title={Plan-R1: Safe and Feasible Trajectory Planning as Language Modeling},
-  author={Tang, Xiaolong and Kan, Meina and Shan, Shiguang and Chen, Xilin},
-  journal={arXiv preprint arXiv:2505.17659},
-  year={2025}
+@inproceedings{
+tang2026planr1,
+title={Plan-R1: Safe and Feasible Trajectory Planning as Language Modeling},
+author={Xiaolong Tang, Meina Kan, Shiguang Shan and Xilin Chen},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026}
 }
 ```
